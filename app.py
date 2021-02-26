@@ -7,7 +7,7 @@ import joblib
 
 st.title('Mushroom Identification')
 st.header("Edible or Poisonous")
-st.subheader("This App would identify if the mushroom os edible or not")
+st.subheader("This App would identify if the mushroom is edible or not")
 st.text("Dataset used from UCI repository: https://archive.ics.uci.edu/ml/datasets/Mushroom")
 
 
