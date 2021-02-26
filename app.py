@@ -1,5 +1,5 @@
 import streamlit as st
-#from PIL import Image
+from PIL import Image
 import numpy as np
 #from tensorflow.keras.models import load_model
 import joblib
@@ -11,21 +11,21 @@ st.subheader("This App would identify if the mushroom os edible or not")
 st.text("Dataset used from UCI repository: https://archive.ics.uci.edu/ml/datasets/Mushroom")
 
 
-#image = Image.open('istockphoto.jpg')
-#st.image(image, use_column_width=True)
-st.subheader('Please fill in the details below and click on the button below!')
+#image = Image.open('https://thumbs.dreamstime.com/z/nineteen-mushrooms-collection-isolated-white-19924652.jpg')
+st.image( 'https://image.shutterstock.com/shutterstock/photos/78360337/display_1500/stock-photo-nineteen-mushrooms-collection-isolated-on-white-background-78360337.jpg', use_column_width=True)
+st.subheader('Please choose the details on the left-sidebar and click the button below!')
 
 
-CapShape = st.selectbox('Cap-Shape', ('bell','conical','convex','flat','knobbed','sunken'))
-capsurface=             st.selectbox("Cap-surface", (' fibrous','grooves','scaly','smooth'))
-capcolor=              st.selectbox( "Cap-color", ('brown','buff','cinnamon','gray','green','pink','purple','red','white','yellow'))
-bruises=                st.selectbox("Bruises", ('yes', 'no'))
-odor=                   st.selectbox( "Odor", ('almond','anise','creosote','fishy','foul','musty','none','pungent','spicy'))
-gillattachment=          st.selectbox('Gill-attachment', ('attached', 'free'))
+CapShape = st.sidebar.selectbox('Cap-Shape', ('bell','conical','convex','flat','knobbed','sunken'))
+capsurface=             st.sidebar.selectbox("Cap-surface", (' fibrous','grooves','scaly','smooth'))
+capcolor=              st.sidebar.selectbox( "Cap-color", ('brown','buff','cinnamon','gray','green','pink','purple','red','white','yellow'))
+bruises=                st.sidebar.selectbox("Bruises", ('yes', 'no'))
+odor=                   st.sidebar.selectbox( "Odor", ('almond','anise','creosote','fishy','foul','musty','none','pungent','spicy'))
+gillattachment=          st.sidebar.selectbox('Gill-attachment', ('attached', 'free'))
 
-gillspacing=            st.selectbox('Gill-spacing', ('close', 'crowded'))
-gillsize=               st.selectbox('Gill-size', ('broad','narrow'))
-gillcolor=              st.selectbox('Gill-color', ('black',
+gillspacing=            st.sidebar.selectbox('Gill-spacing', ('close', 'crowded'))
+gillsize=               st.sidebar.selectbox('Gill-size', ('broad','narrow'))
+gillcolor=              st.sidebar.selectbox('Gill-color', ('black',
  'brown',
  'buff',
  'chocolate',
@@ -37,11 +37,11 @@ gillcolor=              st.selectbox('Gill-color', ('black',
  'red',
  'white',
  'yellow'))
-stalkshape=              st.selectbox('Stalk-shape', ('enlarging', 'tapering'))
-stalkroot=               st.selectbox('Stack-root', ('missing', 'bulbous', 'club', 'equal', 'rooted', ))
-stalksurfaceabovering= st.selectbox('Stalk-surface-above-ring', ('fibrous', 'scaly', 'silky', 'smooth'))
-stalksurfacebelowring= st.selectbox('Stalk-surface-below-ring', ('fibrous', 'scaly', 'silky', 'smooth'))
-stalkcolorabovering=   st.selectbox('Stack-color-above-ring', ('brown',
+stalkshape=              st.sidebar.selectbox('Stalk-shape', ('enlarging', 'tapering'))
+stalkroot=               st.sidebar.selectbox('Stack-root', ('missing', 'bulbous', 'club', 'equal', 'rooted', ))
+stalksurfaceabovering= st.sidebar.selectbox('Stalk-surface-above-ring', ('fibrous', 'scaly', 'silky', 'smooth'))
+stalksurfacebelowring= st.sidebar.selectbox('Stalk-surface-below-ring', ('fibrous', 'scaly', 'silky', 'smooth'))
+stalkcolorabovering=   st.sidebar.selectbox('Stack-color-above-ring', ('brown',
 	'buff',
 	'cinnamon',
 	'gray',
@@ -50,7 +50,7 @@ stalkcolorabovering=   st.selectbox('Stack-color-above-ring', ('brown',
 	'red',
 	'white',
 	'yellow'))
-stalkcolorbelowring=   st.selectbox('Stalk-color-below-ring', ('brown',
+stalkcolorbelowring=   st.sidebar.selectbox('Stalk-color-below-ring', ('brown',
  'buff',
  'cinnamon',
  'gray',
@@ -59,15 +59,15 @@ stalkcolorbelowring=   st.selectbox('Stalk-color-below-ring', ('brown',
  'red',
  'white',
  'yellow'))
-veilcolor=               st.selectbox('Veil-color', ('brown', 'orange', 'white', 'yellow'))
-ringnumber=              st.selectbox('Ring-number', ('none', 'one', 'two'))
-ringtype=               st.selectbox('Ring-type', (
+veilcolor=               st.sidebar.selectbox('Veil-color', ('brown', 'orange', 'white', 'yellow'))
+ringnumber=              st.sidebar.selectbox('Ring-number', ('none', 'one', 'two'))
+ringtype=               st.sidebar.selectbox('Ring-type', (
  'evanescent',
  'flaring',
  'large',
  'none',
  'pendant'))
-sporeprintcolor= st.selectbox('Spore-print-color',('black',
+sporeprintcolor= st.sidebar.selectbox('Spore-print-color',('black',
  'brown',
  'buff',
  'chocolate',
@@ -76,8 +76,8 @@ sporeprintcolor= st.selectbox('Spore-print-color',('black',
  'purple',
  'white',
  'yellow'))
-population=               st.selectbox('Population', ('abundant', 'clustered', 'numerous', 'scattered', 'several', 'solitary'))
-habitat=                 st.selectbox('Habitat', ('grasses', 'leaves', 'meadows', 'paths', 'urban', 'waste', 'woods'))
+population=               st.sidebar.selectbox('Population', ('abundant', 'clustered', 'numerous', 'scattered', 'several', 'solitary'))
+habitat=                 st.sidebar.selectbox('Habitat', ('grasses', 'leaves', 'meadows', 'paths', 'urban', 'waste', 'woods'))
 
 
 
