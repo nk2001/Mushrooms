@@ -10,8 +10,6 @@ st.header("Edible or Poisonous")
 st.subheader("This App would identify if a mushroom is edible or not")
 st.text("Dataset used from UCI repository: https://archive.ics.uci.edu/ml/datasets/Mushroom")
 
-
-#image = Image.open('https://thumbs.dreamstime.com/z/nineteen-mushrooms-collection-isolated-white-19924652.jpg')
 st.image( 'https://image.shutterstock.com/shutterstock/photos/78360337/display_1500/stock-photo-nineteen-mushrooms-collection-isolated-on-white-background-78360337.jpg', use_column_width=True)
 st.subheader('Please choose the details on the left-sidebar and click the button below!')
 
