@@ -1,7 +1,8 @@
 import streamlit as st
-from PIL import Image
+#from PIL import Image
 import numpy as np
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
+import joblib
 
 
 st.title('Mushroom Identification App')
@@ -218,11 +219,12 @@ population_arr +habitat_arr)
 new_mushroom = np.array(input_array)
 								  
 #load the model built earlier								  
-model=load_model("mushroom_model.h5")								 
+#model=load_model("mushroom_model.h5")
+model = joblib.load("mushroom_model_LR.pkl")							 
 
 if (st.button('Check if Edible or Poisonous')):
-	result = (model.predict(new_mushroom.reshape(1,116))> 0.5).astype("int32")
-	if (result[0][0] == 1):
+	result = model.predict(np.array(new_mushroom).reshape(1,-1))
+	if (result[0] == 1):
 		st.subheader("This mushroom is POISONOUS")
 	else:
 		st.subheader("This mushroom is EDIBLE")
