@@ -13,8 +13,10 @@ states that there is no simple rule for determining the edibility of a mushroom;
 let it be'' for Poisonous Oak and Ivy.
 
 ## Files containing the data
- 1.data/agaricus-lepiota.data - dataset
- 2.data/agaricus-lepiota.names - field description and other information on the data
+
+1.data/agaricus-lepiota.data - dataset
+
+2.data/agaricus-lepiota.names - field description and other information on the data
 
 ## Files in this directory
 1. Mushroom Classification.ipynb - Main Jupyter Notebook
