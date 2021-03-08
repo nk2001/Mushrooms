@@ -10,5 +10,6 @@ This data set includes descriptions of hypothetical samples corresponding to 23 
 
 ## Files containing the information:
 
-data/agaricus-lepiota.data  - dataset\n
+data/agaricus-lepiota.data  - dataset
+
 data/agaricus-lepiota.names - field description and other information on the data
