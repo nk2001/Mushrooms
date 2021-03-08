@@ -10,9 +10,8 @@ This data set includes descriptions of hypothetical samples corresponding to 23 
 
 ## Files containing the data:
 
-data/agaricus-lepiota.data  - dataset
-
-data/agaricus-lepiota.names - field description and other information on the data
+1.data/agaricus-lepiota.data  - dataset
+2.data/agaricus-lepiota.names - field description and other information on the data
 
 ## Files in this directory
 1. Mushroom Classification.ipynb - Main Jupyter Notebook
