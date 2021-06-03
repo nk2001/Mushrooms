@@ -24,7 +24,7 @@ let it be'' for Poisonous Oak and Ivy.
 3. requirements.txt - dependencies for hosting on Heroku
 4. setup.sh - Heroku required file
 5. mushroon_model.h5 - tensorflow model
-6. mushroom_model_LR.pkl - Liner Regression model with scikit-learn , used on Heroku
+6. mushroom_model_LR.pkl - logistic Regression model with scikit-learn , used on Heroku
 
 You can see the app running here:
 https://mushroom-identification.herokuapp.com/
